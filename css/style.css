@@ -1,0 +1,293 @@
+:root {
+  ---bg-primary-color: #000814;
+  ---bg-secondary-color: #111d28;
+
+  --text-white: #ffffff;
+  --text-orange: #ff7606;
+}
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--text-white);
+  margin: 0;
+  padding: 0;
+}
+
+.keyword {
+  color: var(--text-orange);
+}
+
+.main-container {
+  background-color: var(---bg-primary-color);
+  padding: 1rem 3rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar {
+  background-color: var(---bg-secondary-color);
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu ul li {
+  list-style-type: none;
+}
+
+.nav-item {
+  display: flex;
+  padding: 5px 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+.material-symbols-outlined {
+  padding: 0 3px;
+}
+
+#home {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.btn {
+  padding: 5px 10px;
+  margin: 3px 0;
+  background-color: var(--text-orange);
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
+#home .aboutMeContent {
+  margin: 10px 10px 10px 0;
+}
+
+#home div img {
+  width: 90%;
+}
+
+#about {
+  background-color: var(---bg-primary-color);
+}
+
+.bio-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  margin-top: 30px;
+}
+
+.bio-data ul li {
+  list-style-type: none;
+}
+
+.bio-data .skills li {
+  /* color: red; */
+  background-color: var(---bg-secondary-color);
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 3px;
+}
+
+.trigger {
+  display: none;
+}
+
+.main-container {
+  position: absolute;
+  top: 70px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 650px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #home div {
+    width: 100%;
+  }
+
+  #home div.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .bio-data {
+    display: block;
+  }
+
+  .main-container {
+    padding: 1rem 1rem;
+  }
+
+  /* navbar */
+  .menu {
+    display: none;
+    background-color: red;
+    color: red;
+  }
+
+  .trigger {
+    display: block;
+  }
+}
+
+.show-menu {
+  display: block;
+  background-color: var(---bg-secondary-color);
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 40%;
+  height: 85vh;
+}
+
+#services {
+  margin: 32px 0;
+}
+
+.service > span {
+  color: var(--text-orange);
+  font-size: 48px;
+}
+
+.services-wrapper {
+  display: flex;
+}
+
+.services-wrapper .service {
+  text-align: center;
+  background-color: var(---bg-secondary-color);
+  margin: 16px;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.education-section {
+  /* background-color: #ff7606; */
+  padding: 16px;
+  border-left: 3px solid var(--text-orange);
+  background-color: var(---bg-secondary-color);
+}
+
+#education {
+  margin: 32px 0;
+}
+
+.education-wrapper > div {
+  margin: 24px 0;
+}
+
+.edu-date {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.education-section > h3 {
+  /* background-color: #ff7606; */
+  margin: 12px 0;
+}
+
+.contact > h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+.contact-ways {
+  display: flex;
+  justify-content: space-around;
+  margin: 48px 0;
+}
+
+.contact-ways > div {
+  text-align: center;
+  font-size: 24px;
+  margin: 24px 0;
+}
+
+.text-orange {
+  color: var(--text-orange);
+  font-size: 32px;
+}
+
+.contact-form .input-group {
+  margin: 16px;
+}
+
+.input-group input {
+  background-color: var(---bg-secondary-color);
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn button {
+  margin: 4px;
+}
+
+.footer {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 950px) {
+  .services-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contact-ways {
+    flex-direction: column;
+    
+  }
+
+  .input-group input { 
+    padding: auto;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 350px) {
+  .show-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 650px) {
+  .show-menu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
